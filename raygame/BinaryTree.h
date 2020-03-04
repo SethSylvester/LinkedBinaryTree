@@ -18,4 +18,5 @@ private:
 		int horizontalSpacing, TreeNode* selected = nullptr);
 	//The root node of the tree
 	TreeNode* m_pRoot;
+	TreeNode * parentNode;
 };
