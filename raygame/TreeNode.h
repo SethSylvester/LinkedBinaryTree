@@ -1,24 +1,30 @@
 #pragma once
+
 class TreeNode
 {
 public:
+	TreeNode() {}
 	TreeNode(int value) { m_value = value; }
 	~TreeNode() {}
+
 	bool hasLeft() { return (m_left != nullptr); }
 	bool hasRight() { return (m_right != nullptr); }
+
+	//Get private varibles
 	int getData() { return m_value; }
 	TreeNode* getLeft() { return m_left; }
 	TreeNode* getRight() { return m_right; }
-	void setData(int value) { m_value = value; }
-	void setLeft(TreeNode* node) { m_left = node; }
-	void setRight(TreeNode* node) { m_right = node; }
+
+	//Set the private variables
+	void SetData(int value) { m_value = value; }
+	void SetLeft(TreeNode* node) { m_left = node; }
+	void SetRight(TreeNode* node) { m_right = node; }
+
 	void draw(int x, int y, bool selected = false);
 
 private:
-	// this could also be a pointer to another object if you like
 	int m_value;
 
-	// node's children
 	TreeNode* m_left;
 	TreeNode* m_right;
 };

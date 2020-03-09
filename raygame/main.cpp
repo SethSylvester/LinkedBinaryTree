@@ -15,6 +15,7 @@
 
 int main()
 {
+
 	// Initialization
 	//--------------------------------------------------------------------------------------
 	int screenWidth = 800;
@@ -24,17 +25,19 @@ int main()
 
 	SetTargetFPS(60);
 
-	BinaryTree tree;
-	tree.insert(5);
-	tree.insert(7);
-	tree.insert(3);
-	tree.insert(2);
-	tree.insert(1);
-	tree.insert(18);
-	tree.insert(6);
-	tree.insert(8);
-	tree.insert(9);
-	tree.remove(8);
+	BinaryTree Tree;
+	TreeNode* selected;
+
+	Tree.insert(8);
+	Tree.insert(13);
+	Tree.insert(3);
+	Tree.insert(9);
+	Tree.insert(5);
+	Tree.insert(22);
+	Tree.insert(14);
+	Tree.insert(48);
+	selected = Tree.find(13);
+	Tree.remove(8);
 
 	//--------------------------------------------------------------------------------------
 
@@ -54,7 +57,7 @@ int main()
 
 		DrawText("Please be proud of me Van.", 210, 200, 35, MAGENTA);
 
-		tree.draw();
+		Tree.draw(selected);
 
 		EndDrawing();
 		//----------------------------------------------------------------------------------
